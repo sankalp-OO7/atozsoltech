@@ -9,8 +9,9 @@ import { motion, AnimatePresence } from "framer-motion";
 const loadingOverlayVariants = {
   initial: {
     opacity: 1,
+    // use site’s dark slate background gradient for consistency
     background:
-      "linear-gradient(135deg, #05051a 0%, #100f2e 50%, #05051a 100%)", // Dark, deep space blue/black
+      "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)",
   },
   exit: {
     opacity: 0,
@@ -132,7 +133,13 @@ export function LoadingOverlay({ isLoading }) {
   const [progress, setProgress] = useState(0);
   const [particleStyles, setParticleStyles] = useState([]);
 
+  // Watch for isLoading changes so the animation replays each time it's shown
   useEffect(() => {
+    if (!isLoading) return;
+
+    // reset state for new animation run
+    setProgress(0);
+
     // Generate data particle styles only on client
     const generateParticles = () => {
       const newParticleStyles = [...Array(30)].map(() => ({
@@ -162,7 +169,7 @@ export function LoadingOverlay({ isLoading }) {
     return () => {
       clearInterval(progressTimer);
     };
-  }, []);
+  }, [isLoading]);
 
   return (
     <AnimatePresence>
@@ -180,7 +187,7 @@ export function LoadingOverlay({ isLoading }) {
               className="absolute inset-0 bg-repeat"
               style={{
                 backgroundImage:
-                  "radial-gradient(rgba(45, 140, 255, 0.1) 1px, transparent 1px)",
+                  "radial-gradient(rgba(56, 189, 248, 0.1) 1px, transparent 1px)",
                 backgroundSize: "20px 20px",
               }}
             />
@@ -205,7 +212,12 @@ export function LoadingOverlay({ isLoading }) {
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/80" />
 
           {/* Main Content Container */}
+          {/* frame wrapper: adds responsive border around inner animation */}
           <div className="relative flex items-center justify-center min-h-screen p-4">
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="w-full h-full mx-auto border-cyan-500/60 rounded-lg
+                                 border-2 sm:border-4 md:border-8 lg:border-12" />
+            </div>
             <div className="text-center max-w-4xl mx-auto">
               {/* Logo/System Core Animation */}
               <motion.div
@@ -255,7 +267,7 @@ export function LoadingOverlay({ isLoading }) {
                         "0 0 15px rgba(255, 255, 255, 0.8), 0 0 5px rgba(255, 255, 255, 0.5)",
                     }}
                   >
-                    S
+                    A
                   </span>
                 </div>
               </motion.div>
@@ -272,7 +284,7 @@ export function LoadingOverlay({ isLoading }) {
                 <motion.div variants={wordVariants} className="overflow-hidden">
                   <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-none">
                     <span className="inline-block bg-gradient-to-r from-white via-cyan-300 to-white bg-clip-text text-transparent">
-                      SHAMSGS
+                      AtoZ SolTech
                     </span>
                   </h1>
                 </motion.div>
@@ -281,7 +293,7 @@ export function LoadingOverlay({ isLoading }) {
                 <motion.div variants={wordVariants} className="overflow-hidden">
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-none">
                     <span className="inline-block bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-400 bg-clip-text text-transparent drop-shadow-md">
-                      SHAMS GLOBAL SYSTEMS
+                      ATOZ SOLTECH
                     </span>
                   </h2>
                 </motion.div>
@@ -289,7 +301,7 @@ export function LoadingOverlay({ isLoading }) {
                 {/* Tagline - AI Focus */}
                 <motion.div variants={wordVariants} className="overflow-hidden">
                   <p className="text-lg sm:text-xl md:text-2xl text-cyan-300/90 font-mono tracking-wider px-4 mt-2">
-                    // Executing Trades with Data Precision
+                    // Powering Your Digital Transformation
                   </p>
                 </motion.div>
 
@@ -297,13 +309,13 @@ export function LoadingOverlay({ isLoading }) {
                 <motion.div variants={wordVariants} className="overflow-hidden">
                   <div className="flex flex-wrap justify-center gap-3 mt-6 px-4">
                     <span className="px-3 py-1 bg-slate-800/60 border border-cyan-500/30 rounded-lg text-sm text-cyan-200 font-medium backdrop-blur-sm shadow-xl">
-                      DUBAI
+                      INDIA
                     </span>
                     <span className="px-3 py-1 bg-slate-800/60 border border-amber-500/30 rounded-lg text-sm text-amber-200 font-medium backdrop-blur-sm shadow-xl">
-                      ALGO TRADING
+                      AI & CLOUD
                     </span>
                     <span className="px-3 py-1 bg-slate-800/60 border border-cyan-500/30 rounded-lg text-sm text-cyan-200 font-medium backdrop-blur-sm shadow-xl">
-                      AI DRIVEN
+                      ENTERPRISE
                     </span>
                   </div>
                 </motion.div>
@@ -323,7 +335,7 @@ export function LoadingOverlay({ isLoading }) {
                   <div className="absolute top-0 left-0 h-full w-1/4 bg-white/10 blur-sm animate-pulse" />
                 </div>
                 <p className="text-center text-cyan-300/70 text-sm mt-4 font-light tracking-wide font-mono">
-                  Loading System Core & Financial Data...
+                  Loading AtoZ SolTech Platform...
                 </p>
               </motion.div>
             </div>
