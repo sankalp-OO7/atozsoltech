@@ -1,0 +1,256 @@
+{
+  "brand": {
+    "name": "AtoZ SolTech",
+    "tagline": "Highly Experienced Global Technology Consultants",
+    "description": "Execution of Digital Technologies: AI, ML, BigData, ERP, Business Re-engineering & Strategy",
+    "subtitle": "Excellence Through Experience: 10+ Years of Certified Technology Expertise"
+  },
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "solutions": "Solutions",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Information Technology Consultants",
+    "heading": "Highly Experienced Global Technology Consultants",
+    "subheading": "Execution of Digital Technologies: AI, ML, BigData, ERP, Business Re-engineering & Strategy",
+    "description": "10+ Years of Certified Technology Expertise ensuring Quality Service",
+    "cta": "Explore Services",
+    "cta_secondary": "Schedule Consultation",
+    "stats": [
+      { "value": "10+", "label": "Years Experience" },
+      { "value": "50+", "label": "Projects Delivered" },
+      { "value": "100%", "label": "Satisfaction Rate" }
+    ]
+  },
+  "services": [
+    {
+      "id": "ai-ml",
+      "title": "AI & Machine Learning",
+      "description": "Cutting-edge artificial intelligence and machine learning solutions for enterprise automation",
+      "features": ["Model Development", "Neural Networks", "Data Science", "Predictive Analytics"],
+      "icon": "🧠"
+    },
+    {
+      "id": "cloud-aws-azure",
+      "title": "AWS & Azure Cloud Architecture",
+      "description": "Comprehensive cloud architecture services for both AWS and Azure platforms",
+      "features": ["Cloud Migration", "Infrastructure Design", "Scalability", "Cost Optimization"],
+      "icon": "☁️"
+    },
+    {
+      "id": "networking-ccie",
+      "title": "Enterprise Networking & CCIE",
+      "description": "Expert-level enterprise networking infrastructure with CCIE domain expertise",
+      "features": ["Routing & Switching", "Wireless Solutions", "Network Security", "Performance Tuning"],
+      "icon": "🌐"
+    },
+    {
+      "id": "vmware",
+      "title": "VMware Solutions",
+      "description": "Specialized VMware virtualization solutions and comprehensive implementation services",
+      "features": ["Virtualization", "Infrastructure", "High Availability", "Disaster Recovery"],
+      "icon": "⚙️"
+    },
+    {
+      "id": "digital-transformation",
+      "title": "Digital Transformation",
+      "description": "Strategic digital transformation and business re-engineering solutions",
+      "features": ["Legacy Modernization", "Process Optimization", "AI Integration", "Strategy"],
+      "icon": "🚀"
+    },
+    {
+      "id": "erp-sap",
+      "title": "ERP & SAP HANA",
+      "description": "Enterprise Resource Planning and SAP HANA implementation expertise",
+      "features": ["ERP Systems", "SAP HANA", "Business Processes", "Data Integration"],
+      "icon": "📊"
+    },
+    {
+      "id": "infrastructure",
+      "title": "IT Infrastructure",
+      "description": "Data centers, MS SharePoint, ECM, Active Directory, and MS Exchange systems",
+      "features": ["Data Centers", "Infrastructure Design", "System Integration", "Support"],
+      "icon": "🏗️"
+    },
+    {
+      "id": "cybersecurity",
+      "title": "Cybersecurity Solutions",
+      "description": "Comprehensive security solutions to protect your enterprise infrastructure",
+      "features": ["Security Audits", "Threat Protection", "Compliance", "Risk Management"],
+      "icon": "🔒"
+    }
+  ],
+  "solutions": [
+    {
+      "id": "legacy-to-ai",
+      "industry": "Legacy to AI Transition",
+      "problem": "Enterprises operating with outdated infrastructures that limit innovation and efficiency",
+      "solution": "Strategic assessment, custom roadmap, data transformation, intelligent automation, and workforce enablement",
+      "results": "Seamless transition from legacy systems to AI-powered solutions",
+      "icon": "🔄"
+    },
+    {
+      "id": "ai-readiness",
+      "industry": "AI Readiness Assessment",
+      "problem": "Uncertainty about AI integration possibilities and where to start",
+      "solution": "Analyze legacy systems, workflows, and data to determine AI integration opportunities",
+      "results": "Clear roadmap for AI adoption aligned with business goals",
+      "icon": "📋"
+    },
+    {
+      "id": "data-transformation",
+      "industry": "Data Transformation",
+      "problem": "Traditional databases not optimized for modern analytics and AI workflows",
+      "solution": "Seamless shift from traditional databases to AI-optimized environments",
+      "results": "Real-time insights and enhanced decision-making capabilities",
+      "icon": "📊"
+    },
+    {
+      "id": "automation-implementation",
+      "industry": "Intelligent Automation",
+      "problem": "Manual processes causing inefficiencies, high costs, and slower decision-making",
+      "solution": "Implement AI-driven automation to enhance efficiency and improve decisions",
+      "results": "Reduced costs, increased productivity, better business outcomes",
+      "icon": "⚡"
+    },
+    {
+      "id": "workforce-enablement",
+      "industry": "Workforce Enablement",
+      "problem": "Teams unfamiliar with AI technology and uncertain how to work alongside it",
+      "solution": "Train and guide teams to work effectively with AI rather than fear it",
+      "results": "Empowered workforce ready for the AI-driven future",
+      "icon": "👥"
+    }
+  ],
+  "projects": [
+    {
+      "id": "real-estate-platform",
+      "name": "Real Estate CRM Platform",
+      "industry": "Real Estate",
+      "challenge": "A leading property developer needed to manage 5000+ leads across multiple channels with manual processes",
+      "solution": "Built AI-powered CRM with automated lead scoring, WhatsApp integration, and intelligent follow-up workflows",
+      "results": "Lead conversion improved by 45% • Response time reduced from 24h to 5 minutes • Revenue increased by $2.3M",
+      "techStack": ["Next.js", "Node.js", "PostgreSQL", "OpenAI", "WhatsApp API"],
+      "year": "2024"
+    },
+    {
+      "id": "fintech-compliance",
+      "name": "FinTech Compliance Automation",
+      "industry": "Finance",
+      "challenge": "Manual compliance checks, KYC verification bottlenecks, and regulatory documentation processes slowing operations",
+      "solution": "Developed AI agents for automated KYC, real-time compliance monitoring, and intelligent document processing",
+      "results": "Processing time reduced by 65% • 99.95% compliance accuracy • Onboarded 10000+ customers monthly",
+      "techStack": ["Python", "TensorFlow", "Kubernetes", "Stripe", "Legal APIs"],
+      "year": "2024"
+    },
+    {
+      "id": "ecom-personalization",
+      "name": "E-Commerce AI Personalization Engine",
+      "industry": "E-Commerce",
+      "challenge": "Generic product recommendations, high cart abandonment rate, and poor customer retention metrics",
+      "solution": "Created ML-powered recommendation engine with behavioral analytics and AI-driven personalization layer",
+      "results": "Cart abandonment dropped 35% • AOV increased by 48% • Customer retention up 52%",
+      "techStack": ["React", "Python", "TensorFlow", "Redis", "Shopify API"],
+      "year": "2023"
+    },
+    {
+      "id": "agency-automation",
+      "name": "Creative Agency Workflow Automation",
+      "industry": "Agencies",
+      "challenge": "Manual project coordination, repetitive task management, and inefficient resource allocation across teams",
+      "solution": "Built comprehensive workflow automation system with AI task assignment and intelligent resource planning",
+      "results": "Project delivery speed 4x faster • Team capacity increased 60% • Client satisfaction 9.8/10",
+      "techStack": ["Next.js", "TypeScript", "MongoDB", "Socket.io", "OpenAI"],
+      "year": "2023"
+    },
+    {
+      "id": "enterprise-integration",
+      "name": "Enterprise Data Integration Platform",
+      "industry": "Enterprise",
+      "challenge": "Disparate legacy systems, poor data visibility, and inefficient inter-departmental workflows",
+      "solution": "Engineered unified data platform with AI-driven insights and intelligent process orchestration",
+      "results": "30% operational efficiency gain • $4.2M annual savings • Real-time insights across 15 departments",
+      "techStack": ["Node.js", "PostgreSQL", "Kafka", "Elasticsearch", "Docker"],
+      "year": "2024"
+    }
+  ],
+  "about": {
+    "heading": "About AtoZ SolTech",
+    "mission": "Empowering enterprises with future-oriented solutions where AI-powered automation and agile digital strategies drive transformative success",
+    "vision": "To be the trusted partner bridging the gap between traditional legacy systems and cutting-edge AI-driven solutions",
+    "story": "With a wealth of experience and strong track record as Certified Technology Specialists from IIT and IIM, AtoZ SolTech brings 10+ years of expertise in digital transformation. We specialize in helping organizations seamlessly transition from legacy systems to AI-powered enterprises that are future-ready, competitive, and innovative.",
+    "stats": [
+      {
+        "number": "10+",
+        "label": "Years Experience"
+      },
+      {
+        "number": "50+",
+        "label": "Projects Delivered"
+      },
+      {
+        "number": "100%",
+        "label": "Client Satisfaction"
+      },
+      {
+        "number": "IIT/IIM",
+        "label": "Certified Specialists"
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Ready to Transform Your Enterprise?",
+    "subheading": "Let's discuss how we can help you transition from legacy to AI-powered solutions",
+    "email": "info@atozsoltech.com",
+    "phone": "+1 (555) 123-4567",
+    "address": "Global Technology Consultants • Multiple Locations",
+    "form": {
+      "name_label": "Full Name",
+      "name_placeholder": "Your name",
+      "email_label": "Email Address",
+      "email_placeholder": "your@email.com",
+      "company_label": "Company Name",
+      "company_placeholder": "Your company",
+      "message_label": "Message",
+      "message_placeholder": "Tell us about your project...",
+      "submit": "Send Message",
+      "success": "Message sent successfully! We'll be in touch soon."
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 AtoZ SolTech. All rights reserved.",
+    "links": {
+      "services": "Services",
+      "solutions": "Solutions",
+      "projects": "Projects",
+      "about": "About",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "testimonials": [
+    {
+      "name": "Sarah Chen",
+      "title": "CEO, PropTech Solutions",
+      "content": "AtoZ SolTech transformed our lead management completely. We went from managing 50 leads weekly to 500+, all without increasing staff.",
+      "industry": "Real Estate"
+    },
+    {
+      "name": "Marcus Rodriguez",
+      "title": "CTO, FinServe Corp",
+      "content": "Their AI automation reduced our compliance processing time by 65%. It's like having 20 more compliance officers without the overhead.",
+      "industry": "Finance"
+    },
+    {
+      "name": "Priya Sharma",
+      "title": "Founder, Digital Ventures",
+      "content": "The AI agents handle customer inquiries 24/7 in multiple languages. Our support team can now focus on complex issues only.",
+      "industry": "E-Commerce"
+    }
+  ]
+}
