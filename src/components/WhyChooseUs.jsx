@@ -1,6 +1,6 @@
 "use client";
 
-import { Target, Users, Briefcase, Award } from "lucide-react";
+import { Target } from "lucide-react";
 import { ServiceCard } from "@/components/ServiceCard";
 
 const items = [
@@ -34,6 +34,7 @@ export function WhyChooseUs() {
     <section className="mx-auto max-w-7xl px-4 py-20">
       {/* Header */}
       <div className="text-center mb-20">
+        {/* Badge — exact from reference */}
         <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-4 py-1.5 shadow-sm mb-6">
           <Target className="w-3.5 h-3.5 text-blue-600 fill-blue-600" />
           <span className="text-xs font-bold uppercase tracking-wider text-blue-700">
@@ -41,14 +42,16 @@ export function WhyChooseUs() {
           </span>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+        {/* Heading */}
+        <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight leading-[1.15]">
           Why Choose{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
             AtoZ SolTech
           </span>
         </h2>
 
-        <p className="text-xl text-slate-500 font-medium max-w-2xl mx-auto">
+        {/* Description */}
+        <p className="text-xl text-slate-500 font-medium max-w-2xl mx-auto leading-relaxed mt-4">
           Certified technology specialists with proven expertise across
           enterprise solutions.
         </p>

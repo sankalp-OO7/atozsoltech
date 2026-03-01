@@ -1,118 +1,38 @@
 "use client";
-
-import { AuroraBackground } from "@/components/AuroraBackground";
+import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/SectionHeader";
-import { ServiceCard } from "@/components/ServiceCard";
+import SectionWrapper from "@/components/SectionWrapper";
 import { CTASection } from "@/components/CTASection";
 
-export default function Infrastructure() {
+export default function Page() {
   return (
-    <main className="min-h-screen">
-      <AuroraBackground />
+    <SectionWrapper>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-center mb-20 pt-32"
+      >
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-slate-900 via-purple-600 to-slate-900 bg-clip-text text-transparent">
+          Infrastructure Solutions
+        </h1>
+        <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          Comprehensive solutions and insights for your business transformation
+        </p>
+      </motion.div>
 
-      {/* Hero */}
-      <section className="relative pt-32 pb-20 px-6 md:px-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6">
-            IT Infrastructure
-          </h1>
-          <p className="text-xl text-slate-600">
-            Robust infrastructure solutions for enterprise-scale operations
-          </p>
-        </div>
-      </section>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className="bg-purple-50 rounded-3xl p-12 mb-20 border border-purple-200"
+      >
+        <h2 className="text-4xl font-bold text-slate-900 mb-8">Coming Soon</h2>
+        <p className="text-slate-600 text-lg">
+          We're working on bringing you the best content in this area. Check
+          back soon!
+        </p>
+      </motion.div>
 
-      {/* Services */}
-      <section className="relative py-20 px-6 md:px-12">
-        <div className="max-w-6xl mx-auto">
-          <SectionHeader
-            badge="INFRASTRUCTURE"
-            heading="Complete Infrastructure Solutions"
-            description="From data centers to cloud infrastructure management"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <ServiceCard
-              icon="🏢"
-              title="Data Center Solutions"
-              description="Modern data center design, implementation, and management"
-              features={[
-                "Infrastructure Design",
-                "Redundancy",
-                "Cooling Systems",
-                "Physical Security",
-              ]}
-            />
-            <ServiceCard
-              icon="💾"
-              title="Storage Solutions"
-              description="Enterprise storage systems with high availability and disaster recovery"
-              features={[
-                "SAN/NAS",
-                "Backup Systems",
-                "Replication",
-                "Archive Solutions",
-              ]}
-            />
-            <ServiceCard
-              icon="🔧"
-              title="Virtualization"
-              description="VMware and Hyper-V infrastructure for enterprise consolidation"
-              features={[
-                "Virtual Machines",
-                "High Availability",
-                "Disaster Recovery",
-                "Management",
-              ]}
-            />
-            <ServiceCard
-              icon="📊"
-              title="Database Solutions"
-              description="Enterprise database architecture and optimization"
-              features={[
-                "Database Design",
-                "Performance Tuning",
-                "HA Setup",
-                "Backup Strategy",
-              ]}
-            />
-            <ServiceCard
-              icon="🎯"
-              title="ERP & SAP"
-              description="Comprehensive ERP implementation and SAP HANA solutions"
-              features={[
-                "Implementation",
-                "Customization",
-                "Integration",
-                "Optimization",
-              ]}
-            />
-            <ServiceCard
-              icon="🛡️"
-              title="Backup & DR"
-              description="Disaster recovery planning and business continuity"
-              features={[
-                "DR Planning",
-                "Backup Setup",
-                "Recovery Testing",
-                "Compliance",
-              ]}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="relative py-20 px-6 md:px-12">
-        <div className="max-w-4xl mx-auto">
-          <CTASection
-            heading="Modernize Your Infrastructure"
-            description="Build reliable, scalable infrastructure for future growth"
-            primaryText="Get Infrastructure Audit"
-            secondaryText="View Case Studies"
-          />
-        </div>
-      </section>
-    </main>
+      <CTASection />
+    </SectionWrapper>
   );
 }

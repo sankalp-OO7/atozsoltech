@@ -1,96 +1,38 @@
 "use client";
-
-import { AuroraBackground } from "@/components/AuroraBackground";
+import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/SectionHeader";
-import { ServiceCard } from "@/components/ServiceCard";
+import SectionWrapper from "@/components/SectionWrapper";
 import { CTASection } from "@/components/CTASection";
 
-export default function Networking() {
+export default function Page() {
   return (
-    <main className="min-h-screen">
-      <AuroraBackground />
+    <SectionWrapper>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-center mb-20 pt-32"
+      >
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-slate-900 via-green-600 to-slate-900 bg-clip-text text-transparent">
+          Networking Solutions
+        </h1>
+        <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          Comprehensive solutions and insights for your business transformation
+        </p>
+      </motion.div>
 
-      {/* Hero */}
-      <section className="relative pt-32 pb-20 px-6 md:px-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6">
-            Networking & CCIE
-          </h1>
-          <p className="text-xl text-slate-600">
-            Enterprise-grade networking infrastructure with Cisco expertise
-          </p>
-        </div>
-      </section>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className="bg-green-50 rounded-3xl p-12 mb-20 border border-green-200"
+      >
+        <h2 className="text-4xl font-bold text-slate-900 mb-8">Coming Soon</h2>
+        <p className="text-slate-600 text-lg">
+          We're working on bringing you the best content in this area. Check
+          back soon!
+        </p>
+      </motion.div>
 
-      {/* Services */}
-      <section className="relative py-20 px-6 md:px-12">
-        <div className="max-w-6xl mx-auto">
-          <SectionHeader
-            badge="NETWORK EXPERTISE"
-            heading="Enterprise Networking Solutions"
-            description="Design, implement, and manage robust network infrastructure"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <ServiceCard
-              icon="🌐"
-              title="Routing & Switching"
-              description="Enterprise-grade routing, switching, and network design"
-              features={[
-                "Network Design",
-                "Configuration",
-                "Optimization",
-                "Troubleshooting",
-              ]}
-            />
-            <ServiceCard
-              icon="📡"
-              title="Wireless Networks"
-              description="Secure and reliable wireless solutions for enterprises"
-              features={[
-                "WLAN Design",
-                "Security Setup",
-                "Mobility Solutions",
-                "Coverage Planning",
-              ]}
-            />
-            <ServiceCard
-              icon="🔒"
-              title="Network Security"
-              description="Firewalls, VPNs, and comprehensive security architecture"
-              features={[
-                "Firewall Setup",
-                "VPN Configuration",
-                "DLP Implementation",
-                "Compliance",
-              ]}
-            />
-            <ServiceCard
-              icon="⚡"
-              title="Performance Tuning"
-              description="Optimize network performance and ensure reliability"
-              features={[
-                "Bandwidth Management",
-                "QoS Configuration",
-                "Monitoring",
-                "Analytics",
-              ]}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="relative py-20 px-6 md:px-12">
-        <div className="max-w-4xl mx-auto">
-          <CTASection
-            heading="Build Enterprise-Grade Networks"
-            description="Expert Cisco and network architecture services for maximum uptime"
-            primaryText="Get Network Assessment"
-            secondaryText="View Design Portfolio"
-          />
-        </div>
-      </section>
-    </main>
+      <CTASection />
+    </SectionWrapper>
   );
 }

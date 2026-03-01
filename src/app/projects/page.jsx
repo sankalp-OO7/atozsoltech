@@ -1,194 +1,191 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight, Award, Zap, TrendingUp } from "lucide-react";
+import { SectionHeader } from "@/components/SectionHeader";
 import SectionWrapper from "@/components/SectionWrapper";
-import CTA from "@/components/CTA";
-import content from "@/data/content.json";
+import { CTASection } from "@/components/CTASection";
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.3,
+export default function Projects() {
+  const projects = [
+    {
+      title: "E-Commerce Platform Scaling",
+      client: "Global Retail Co.",
+      industry: "Retail",
+      challenge: "Legacy system unable to handle 10M+ daily users",
+      solution:
+        "Multi-region cloud architecture with AI-powered recommendations",
+      results: "2x revenue | 99.99% uptime | 40% faster transactions",
+      tech: ["AWS", "Kubernetes", "React", "PostgreSQL", "Redis"],
+      color: "from-blue-500 to-cyan-500",
     },
-  },
-};
+    {
+      title: "Healthcare Data Integration",
+      client: "National Hospital Network",
+      industry: "Healthcare",
+      challenge: "Fragmented patient data across multiple systems",
+      solution: "HIPAA-compliant unified EHR with real-time sync",
+      results: "60% faster care | 100% data security | Full compliance",
+      tech: ["GCP", "HL7", "FHIR", "React", "Python"],
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      title: "Financial Analytics Platform",
+      client: "Investment Bank",
+      industry: "Finance",
+      challenge: "Need for real-time market analytics and predictions",
+      solution: "AI-powered analytics dashboard with ML models",
+      results: "50% faster decisions | $10M+ insights generated",
+      tech: ["GCP", "TensorFlow", "Apache Spark", "Next.js", "D3.js"],
+      color: "from-purple-500 to-pink-500",
+    },
+    {
+      title: "Manufacturing IoT System",
+      client: "Industrial Manufacturer",
+      industry: "Manufacturing",
+      challenge: "Equipment downtime costing millions annually",
+      solution: "IoT sensors with predictive maintenance AI",
+      results: "50% downtime reduction | $5M saved | Better efficiency",
+      tech: ["Azure", "IoT Hub", "ML Studio", "React", "Time-Series DB"],
+      color: "from-orange-500 to-red-500",
+    },
+  ];
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 },
-  },
-};
-
-export default function ProjectsPage() {
   return (
-    <>
-      {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
-          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
-        </div>
+    <SectionWrapper>
+      {/* Hero */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-20 pt-32"
+      >
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-slate-900 via-blue-600 to-slate-900 bg-clip-text text-transparent">
+          Our Projects
+        </h1>
+        <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          Real-world transformations. Real-world results. Real impact.
+        </p>
+      </motion.div>
 
-        <SectionWrapper className="relative z-10">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="text-center"
-          >
-            <motion.h1
-              variants={itemVariants}
-              className="text-5xl font-bold text-white mb-4"
-            >
-              Our Projects
-            </motion.h1>
-            <motion.p
-              variants={itemVariants}
-              className="text-xl text-slate-400"
-            >
-              Real-world case studies of AI transformation
-            </motion.p>
-          </motion.div>
-        </SectionWrapper>
-      </section>
+      {/* Featured Projects */}
+      <div className="mb-20">
+        <SectionHeader
+          title="Featured Projects"
+          subtitle="Delivered with excellence"
+        />
 
-      {/* Projects Grid */}
-      <SectionWrapper className="bg-slate-900/50">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <div className="grid grid-cols-1 gap-8">
-            {content.projects.map((project, idx) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                className="group bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-xl p-8 hover:border-indigo-500/50 transition-all duration-300"
-              >
-                <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-6">
+        <div className="space-y-8">
+          {projects.map((project, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.1, duration: 0.5 }}
+              className="group relative bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-xl transition-all overflow-hidden"
+            >
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-3 transition-opacity`}
+              ></div>
+
+              <div className="relative z-10">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                   <div>
-                    <h2 className="text-3xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
-                      {project.name}
-                    </h2>
-                    <p className="text-indigo-400 font-semibold">
-                      {project.industry} • {project.year}
-                    </p>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                      {project.title}
+                    </h3>
+                    <div className="flex flex-wrap gap-3 text-sm">
+                      <span className="text-slate-600">
+                        📍 {project.client}
+                      </span>
+                      <span className="text-slate-600">
+                        🏢 {project.industry}
+                      </span>
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <p className="text-sm text-slate-400">
-                      Award-Winning Solution
-                    </p>
-                  </div>
+                  <Award
+                    className={`w-6 h-6 text-yellow-500 flex-shrink-0 mt-2 md:mt-0`}
+                  />
                 </div>
 
-                <div className="space-y-4 mb-6">
+                <div className="grid md:grid-cols-3 gap-8 mb-6">
                   <div>
-                    <h3 className="text-lg font-semibold text-red-400 mb-2">
+                    <p className="text-sm font-semibold text-slate-700 mb-2">
                       Challenge
-                    </h3>
-                    <p className="text-slate-300">{project.challenge}</p>
+                    </p>
+                    <p className="text-slate-600">{project.challenge}</p>
                   </div>
-
                   <div>
-                    <h3 className="text-lg font-semibold text-indigo-400 mb-2">
+                    <p className="text-sm font-semibold text-slate-700 mb-2">
                       Solution
-                    </h3>
-                    <p className="text-slate-300">{project.solution}</p>
+                    </p>
+                    <p className="text-slate-600">{project.solution}</p>
                   </div>
-
                   <div>
-                    <h3 className="text-lg font-semibold text-emerald-400 mb-2">
+                    <p className="text-sm font-semibold text-green-700 mb-2">
                       Results
-                    </h3>
-                    <p className="text-slate-300 font-semibold">
+                    </p>
+                    <p className="text-green-600 font-semibold">
                       {project.results}
                     </p>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-sm font-semibold text-slate-400 mb-3">
+                  <p className="text-xs font-semibold text-slate-500 mb-2 uppercase">
                     Tech Stack
-                  </h3>
+                  </p>
                   <div className="flex flex-wrap gap-2">
-                    {project.techStack.map((tech, i) => (
+                    {project.tech.map((tech, tidx) => (
                       <span
-                        key={i}
-                        className="px-3 py-1 bg-indigo-500/20 border border-indigo-500/50 rounded-full text-sm text-indigo-300"
+                        key={tidx}
+                        className={`px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r ${project.color}`}
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </SectionWrapper>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
 
-      {/* Stats Section */}
-      <SectionWrapper className="bg-slate-950">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <div className="text-center mb-12">
-            <motion.h2
-              variants={itemVariants}
-              className="text-4xl font-bold text-white mb-4"
+      {/* Stats */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 mb-20 text-white"
+      >
+        <h2 className="text-4xl font-bold text-center mb-12">
+          Impact By The Numbers
+        </h2>
+        <div className="grid md:grid-cols-4 gap-8">
+          {[
+            { icon: "🎯", number: "50+", label: "Projects Delivered" },
+            { icon: "💰", number: "$500M+", label: "Value Created" },
+            { icon: "🏢", number: "100+", label: "Happy Clients" },
+            { icon: "⭐", number: "98%", label: "Satisfaction Rate" },
+          ].map((stat, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: idx * 0.1, duration: 0.5 }}
+              className="text-center"
             >
-              Track Record
-            </motion.h2>
-          </div>
+              <div className="text-4xl mb-2">{stat.icon}</div>
+              <div className="text-5xl font-bold mb-2">{stat.number}</div>
+              <div className="text-blue-100">{stat.label}</div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { number: "150+", label: "Projects Delivered" },
-              { number: "$500M+", label: "Value Created" },
-              { number: "50+", label: "Enterprise Clients" },
-              { number: "98%", label: "Client Retention" },
-            ].map((stat, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <p className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2">
-                  {stat.number}
-                </p>
-                <p className="text-slate-400">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </SectionWrapper>
-
-      {/* CTA */}
-      <SectionWrapper className="pb-20">
-        <CTA
-          heading="Ready to Be Our Next Success Story?"
-          description="Let's work together to transform your business with AI"
-          buttonText="Start Your Project"
-          buttonHref="/contact"
-        />
-      </SectionWrapper>
-    </>
+      <CTASection />
+    </SectionWrapper>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import content from "@/data/content.json";
 
@@ -10,6 +10,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeItem, setActiveItem] = useState("/");
+  const [moreDropdown, setMoreDropdown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,12 +32,21 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const navItems = [
+  const mainNavItems = [
     { label: "Services", href: "/services" },
     { label: "Solutions", href: "/solutions" },
     { label: "Projects", href: "/projects" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
+  ];
+
+  const moreItems = [
+    { label: "Cloud", href: "/cloud" },
+    { label: "Networking", href: "/networking" },
+    { label: "Infrastructure", href: "/infrastructure" },
+    { label: "AI & Transition", href: "/ai-transition" },
+    { label: "Blog", href: "/blog" },
+    { label: "Careers", href: "/careers" },
   ];
 
   return (
@@ -70,7 +80,7 @@ export default function Navbar() {
             {/* DESKTOP NAV */}
             <div className="hidden md:flex items-center gap-1">
               <ul className="flex items-center gap-1 text-sm font-semibold">
-                {navItems.map((item) => (
+                {mainNavItems.map((item) => (
                   <li key={item.href}>
                     <Link
                       href={item.href}
@@ -85,6 +95,38 @@ export default function Navbar() {
                     </Link>
                   </li>
                 ))}
+
+                {/* More Dropdown */}
+                <li className="relative">
+                  <button
+                    onClick={() => setMoreDropdown(!moreDropdown)}
+                    className="relative px-4 py-2 rounded-lg transition-all cursor-pointer text-slate-600 hover:text-slate-900 hover:bg-black/5 flex items-center gap-1.5"
+                  >
+                    More
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform ${moreDropdown ? "rotate-180" : ""}`}
+                    />
+                  </button>
+
+                  {/* Dropdown Menu */}
+                  {moreDropdown && (
+                    <div className="absolute top-full left-0 mt-2 w-48 bg-white border border-slate-200 rounded-xl shadow-lg z-10 overflow-hidden">
+                      {moreItems.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => {
+                            setActiveItem(item.href);
+                            setMoreDropdown(false);
+                          }}
+                          className="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors border-b border-slate-100 last:border-b-0"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </li>
               </ul>
 
               {/* CTA Button */}
@@ -118,7 +160,7 @@ export default function Navbar() {
             }`}
           >
             <div className="bg-white/95 backdrop-blur-xl border border-slate-200 rounded-2xl p-4 shadow-2xl space-y-2 overflow-y-auto max-h-[80vh]">
-              {navItems.map((item) => (
+              {mainNavItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -135,6 +177,30 @@ export default function Navbar() {
                   {item.label}
                 </Link>
               ))}
+
+              {/* More items section */}
+              <div className="pt-3 border-t border-slate-200">
+                <div className="px-5 py-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                  More Pages
+                </div>
+                {moreItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => {
+                      setOpen(false);
+                      setActiveItem(item.href);
+                    }}
+                    className={`block px-5 py-3 rounded-xl font-medium transition-all cursor-pointer ${
+                      activeItem === item.href
+                        ? "bg-blue-50 text-blue-700"
+                        : "text-slate-500 hover:text-slate-900 hover:bg-slate-50"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
 
               <div className="pt-2 pb-4">
                 <Link

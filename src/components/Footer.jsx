@@ -8,7 +8,8 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-100 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+          {/* Brand Section */}
           <div>
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -19,45 +20,24 @@ export default function Footer() {
             <p className="text-slate-400 text-sm">{content.brand.tagline}</p>
           </div>
 
+          {/* Main Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Services</h3>
+            <h3 className="text-white font-semibold mb-4">Main Pages</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/services"
                   className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
                 >
-                  AI & Machine Learning
+                  Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/solutions"
                   className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
                 >
-                  Cloud Architecture
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
-                >
-                  Networking
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/about"
-                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
-                >
-                  About
+                  Solutions
                 </Link>
               </li>
               <li>
@@ -66,6 +46,76 @@ export default function Footer() {
                   className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
                 >
                   Projects
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Technology Stack */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Technology</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/cloud"
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
+                >
+                  Cloud
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/networking"
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
+                >
+                  Networking
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/infrastructure"
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
+                >
+                  Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/ai-transition"
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
+                >
+                  AI & Transition
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/about"
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers"
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
+                >
+                  Careers
                 </Link>
               </li>
               <li>
@@ -79,6 +129,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Contact Info */}
           <div>
             <h3 className="text-white font-semibold mb-4">Contact</h3>
             <p className="text-slate-400 text-sm">
