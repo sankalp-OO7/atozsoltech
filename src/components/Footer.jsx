@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import content from '@/data/content.json';
+import Link from "next/link";
+import { motion } from "framer-motion";
+import content from "@/data/content.json";
 
 export default function Footer() {
   return (
@@ -22,37 +22,90 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><Link href="/services"><span className="text-slate-400 hover:text-blue-400 transition-colors text-sm">AI & Machine Learning</span></Link></li>
-              <li><Link href="/services"><span className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Cloud Architecture</span></Link></li>
-              <li><Link href="/services"><span className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Networking</span></Link></li>
+              <li>
+                <Link href="/services">
+                  <span className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer">
+                    AI & Machine Learning
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/services">
+                  <span className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer">
+                    Cloud Architecture
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/services">
+                  <span className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer">
+                    Networking
+                  </span>
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link href="/about"><span className="text-slate-400 hover:text-blue-400 transition-colors text-sm">About</span></Link></li>
-              <li><Link href="/projects"><span className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Projects</span></Link></li>
-              <li><Link href="/contact"><span className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Contact</span></Link></li>
+              <li>
+                <Link href="/about">
+                  <span className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer">
+                    About
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/projects">
+                  <span className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer">
+                    Projects
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact">
+                  <span className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer">
+                    Contact
+                  </span>
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-white font-semibold mb-4">Contact</h3>
             <p className="text-slate-400 text-sm">
-              <a href={`mailto:${content.contact.email}`} className="hover:text-blue-400 transition-colors">
+              <a
+                href={`mailto:${content.contact.email}`}
+                className="hover:text-blue-400 transition-colors"
+              >
                 {content.contact.email}
               </a>
             </p>
-            <p className="text-slate-400 text-sm mt-2">{content.contact.address}</p>
+            <p className="text-slate-400 text-sm mt-2">
+              {content.contact.address}
+            </p>
           </div>
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-slate-400 text-sm">© 2024 {content.brand.name}. All rights reserved.</p>
+          <p className="text-slate-400 text-sm">
+            © 2024 {content.brand.name}. All rights reserved.
+          </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Privacy</a>
-            <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Terms</a>
+            <a
+              href="#"
+              className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer"
+            >
+              Privacy
+            </a>
+            <a
+              href="#"
+              className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer"
+            >
+              Terms
+            </a>
           </div>
         </div>
       </div>

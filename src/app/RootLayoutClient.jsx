@@ -7,12 +7,14 @@ import { LoadingOverlay } from "@/components/LoadingOverlay";
 
 export default function RootLayoutClient({ children }) {
   const [showLoading, setShowLoading] = useState(true);
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
 
   useEffect(() => {
     const hasLoaded = sessionStorage.getItem("hasLoaded");
-    
+
     if (hasLoaded) {
       setShowLoading(false);
+      setIsFirstLoad(false);
     } else {
       const timer = setTimeout(() => {
         setShowLoading(false);
