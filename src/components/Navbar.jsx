@@ -11,6 +11,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeItem, setActiveItem] = useState("/");
   const [moreDropdown, setMoreDropdown] = useState(false);
+  const [logoExists, setLogoExists] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,8 +70,20 @@ export default function Navbar() {
               onClick={() => setActiveItem("/")}
               className="flex items-center gap-3 font-black text-xl text-slate-900 hover:scale-105 transition-transform cursor-pointer"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center shadow-md">
-                <span className="text-white font-bold text-xl">A</span>
+              <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md bg-white/0 relative">
+                {/* use state to keep server/client markup deterministic */}
+                {/* assume logo exists on first render; if load fails, show fallback */}
+                <img
+                  src="logo.png"
+                  alt={content.brand.name}
+                  className={`w-10 h-10 object-cover ${logoExists ? "block" : "hidden"}`}
+                  onError={() => setLogoExists(false)}
+                />
+                <div
+                  className={`w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center shadow-md ${logoExists ? "hidden" : "flex"}`}
+                >
+                  <span className="text-white font-bold text-xl">A</span>
+                </div>
               </div>
               <span className="bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
                 {content.brand.name}
