@@ -49,25 +49,26 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <motion.button
+              <Link key={item.href} href={item.href} className="cursor-pointer">
+                <motion.span
                   whileHover={{ scale: 1.05 }}
-                  className="px-3 py-2 text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors cursor-pointer"
+                  className="px-3 py-2 text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors block"
                 >
                   {item.label}
-                </motion.button>
+                </motion.span>
               </Link>
             ))}
           </div>
 
-          <Link href="/contact">
-            <motion.button
+          <Link href="/contact" className="cursor-pointer">
+            <motion.span
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="hidden md:inline-block px-6 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition-shadow cursor-pointer"
+              className="hidden md:inline-block px-6 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition-shadow"
+              role="button"
             >
               Get Started
-            </motion.button>
+            </motion.span>
           </Link>
         </div>
       </div>

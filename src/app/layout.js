@@ -24,7 +24,8 @@ const inter = Inter({
 export const metadata = {
   title: `${content.brand.name} | ${content.brand.tagline}`,
   description: content.brand.description,
-  keywords: "Technology consulting, AI, ML, Cloud, AWS, Azure, Networking, CCIE, VMware, Digital Transformation, ERP, SAP HANA",
+  keywords:
+    "Technology consulting, AI, ML, Cloud, AWS, Azure, Networking, CCIE, VMware, Digital Transformation, ERP, SAP HANA",
   robots: {
     index: true,
     follow: true,
@@ -35,11 +36,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased selection:bg-blue-100`}
+        className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased selection:bg-blue-100 user-select-auto`}
+        suppressHydrationWarning
       >
-        <RootLayoutClient>
-          {children}
-        </RootLayoutClient>
+        <RootLayoutClient>{children}</RootLayoutClient>
       </body>
     </html>
   );
