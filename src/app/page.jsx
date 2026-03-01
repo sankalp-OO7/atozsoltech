@@ -34,24 +34,28 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: '🎯',
-                title: 'Industry Expertise',
-                description: 'Deep knowledge across AI, Cloud, Networking, and Enterprise Infrastructure',
+                icon: "🎯",
+                title: "Industry Expertise",
+                description:
+                  "Deep knowledge across AI, Cloud, Networking, and Enterprise Infrastructure",
               },
               {
-                icon: '👥',
-                title: 'Expert Team',
-                description: 'IIT/IIM certified specialists with 10+ years of global experience',
+                icon: "👥",
+                title: "Expert Team",
+                description:
+                  "IIT/IIM certified specialists with 10+ years of global experience",
               },
               {
-                icon: '🚀',
-                title: 'Strategic Approach',
-                description: 'Customized solutions aligned with your digital transformation goals',
+                icon: "🚀",
+                title: "Strategic Approach",
+                description:
+                  "Customized solutions aligned with your digital transformation goals",
               },
               {
-                icon: '✅',
-                title: 'Proven Results',
-                description: '50+ successful projects with 100% client satisfaction rate',
+                icon: "✅",
+                title: "Proven Results",
+                description:
+                  "50+ successful projects with 100% client satisfaction rate",
               },
             ].map((item, idx) => (
               <ServiceCard

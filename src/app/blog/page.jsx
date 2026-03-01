@@ -1,39 +1,43 @@
-'use client';
+"use client";
 
-import { AuroraBackground } from '@/components/AuroraBackground';
-import { SectionHeader } from '@/components/SectionHeader';
-import { ServiceCard } from '@/components/ServiceCard';
-import { CTASection } from '@/components/CTASection';
+import { AuroraBackground } from "@/components/AuroraBackground";
+import { SectionHeader } from "@/components/SectionHeader";
+import { ServiceCard } from "@/components/ServiceCard";
+import { CTASection } from "@/components/CTASection";
 
 export default function Blog() {
   const articles = [
     {
-      title: 'The Future of AI in Enterprise',
-      date: 'Feb 28, 2026',
-      category: 'AI & ML',
-      excerpt: 'Exploring how artificial intelligence is transforming enterprise operations and decision-making.',
-      icon: '🤖'
+      title: "The Future of AI in Enterprise",
+      date: "Feb 28, 2026",
+      category: "AI & ML",
+      excerpt:
+        "Exploring how artificial intelligence is transforming enterprise operations and decision-making.",
+      icon: "🤖",
     },
     {
-      title: 'Cloud Migration: Best Practices',
-      date: 'Feb 25, 2026',
-      category: 'Cloud',
-      excerpt: 'A comprehensive guide to successful cloud migration with minimal downtime and maximum ROI.',
-      icon: '☁️'
+      title: "Cloud Migration: Best Practices",
+      date: "Feb 25, 2026",
+      category: "Cloud",
+      excerpt:
+        "A comprehensive guide to successful cloud migration with minimal downtime and maximum ROI.",
+      icon: "☁️",
     },
     {
-      title: 'Zero Trust Security Model',
-      date: 'Feb 20, 2026',
-      category: 'Security',
-      excerpt: 'Understanding zero trust architecture and its importance in modern cybersecurity strategies.',
-      icon: '🔒'
+      title: "Zero Trust Security Model",
+      date: "Feb 20, 2026",
+      category: "Security",
+      excerpt:
+        "Understanding zero trust architecture and its importance in modern cybersecurity strategies.",
+      icon: "🔒",
     },
     {
-      title: 'Network Optimization Strategies',
-      date: 'Feb 15, 2026',
-      category: 'Networking',
-      excerpt: 'Proven techniques to enhance network performance and reliability at enterprise scale.',
-      icon: '🌐'
+      title: "Network Optimization Strategies",
+      date: "Feb 15, 2026",
+      category: "Networking",
+      excerpt:
+        "Proven techniques to enhance network performance and reliability at enterprise scale.",
+      icon: "🌐",
     },
   ];
 
@@ -64,7 +68,10 @@ export default function Blog() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {articles.map((article, idx) => (
-              <div key={idx} className="group p-6 rounded-3xl bg-white/80 backdrop-blur-xl border border-white/50 hover:shadow-xl transition-all cursor-pointer">
+              <div
+                key={idx}
+                className="group p-6 rounded-3xl bg-white/80 backdrop-blur-xl border border-white/50 hover:shadow-xl transition-all cursor-pointer"
+              >
                 <div className="flex gap-4 mb-4">
                   <div className="text-3xl">{article.icon}</div>
                   <div>

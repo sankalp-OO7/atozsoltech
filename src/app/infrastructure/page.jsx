@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { AuroraBackground } from '@/components/AuroraBackground';
-import { SectionHeader } from '@/components/SectionHeader';
-import { ServiceCard } from '@/components/ServiceCard';
-import { CTASection } from '@/components/CTASection';
+import { AuroraBackground } from "@/components/AuroraBackground";
+import { SectionHeader } from "@/components/SectionHeader";
+import { ServiceCard } from "@/components/ServiceCard";
+import { CTASection } from "@/components/CTASection";
 
 export default function Infrastructure() {
   return (
@@ -36,37 +36,67 @@ export default function Infrastructure() {
               icon="🏢"
               title="Data Center Solutions"
               description="Modern data center design, implementation, and management"
-              features={['Infrastructure Design', 'Redundancy', 'Cooling Systems', 'Physical Security']}
+              features={[
+                "Infrastructure Design",
+                "Redundancy",
+                "Cooling Systems",
+                "Physical Security",
+              ]}
             />
             <ServiceCard
               icon="💾"
               title="Storage Solutions"
               description="Enterprise storage systems with high availability and disaster recovery"
-              features={['SAN/NAS', 'Backup Systems', 'Replication', 'Archive Solutions']}
+              features={[
+                "SAN/NAS",
+                "Backup Systems",
+                "Replication",
+                "Archive Solutions",
+              ]}
             />
             <ServiceCard
               icon="🔧"
               title="Virtualization"
               description="VMware and Hyper-V infrastructure for enterprise consolidation"
-              features={['Virtual Machines', 'High Availability', 'Disaster Recovery', 'Management']}
+              features={[
+                "Virtual Machines",
+                "High Availability",
+                "Disaster Recovery",
+                "Management",
+              ]}
             />
             <ServiceCard
               icon="📊"
               title="Database Solutions"
               description="Enterprise database architecture and optimization"
-              features={['Database Design', 'Performance Tuning', 'HA Setup', 'Backup Strategy']}
+              features={[
+                "Database Design",
+                "Performance Tuning",
+                "HA Setup",
+                "Backup Strategy",
+              ]}
             />
             <ServiceCard
               icon="🎯"
               title="ERP & SAP"
               description="Comprehensive ERP implementation and SAP HANA solutions"
-              features={['Implementation', 'Customization', 'Integration', 'Optimization']}
+              features={[
+                "Implementation",
+                "Customization",
+                "Integration",
+                "Optimization",
+              ]}
             />
             <ServiceCard
               icon="🛡️"
               title="Backup & DR"
               description="Disaster recovery planning and business continuity"
-              features={['DR Planning', 'Backup Setup', 'Recovery Testing', 'Compliance']}
+              features={[
+                "DR Planning",
+                "Backup Setup",
+                "Recovery Testing",
+                "Compliance",
+              ]}
             />
           </div>
         </div>

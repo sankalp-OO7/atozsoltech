@@ -23,17 +23,26 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services" className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1">
+                <Link
+                  href="/services"
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
+                >
                   AI & Machine Learning
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1">
+                <Link
+                  href="/services"
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
+                >
                   Cloud Architecture
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1">
+                <Link
+                  href="/services"
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
+                >
                   Networking
                 </Link>
               </li>
@@ -44,17 +53,26 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1">
+                <Link
+                  href="/about"
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1">
+                <Link
+                  href="/projects"
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
+                >
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1">
+                <Link
+                  href="/contact"
+                  className="text-slate-400 hover:text-blue-400 transition-colors text-sm cursor-pointer block py-1"
+                >
                   Contact
                 </Link>
               </li>

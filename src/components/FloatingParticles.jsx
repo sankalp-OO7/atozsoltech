@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-export function FloatingParticles({ count = 20, className = '' }) {
+export function FloatingParticles({ count = 20, className = "" }) {
   const [particles, setParticles] = useState([]);
 
   useEffect(() => {
@@ -17,14 +17,16 @@ export function FloatingParticles({ count = 20, className = '' }) {
   }, [count]);
 
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
+    <div
+      className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}
+    >
       {particles.map((particle) => (
         <div
           key={particle.id}
           className="absolute rounded-full bg-blue-300/30"
           style={{
             left: `${particle.left}%`,
-            top: '100%',
+            top: "100%",
             width: `${particle.size}px`,
             height: `${particle.size}px`,
             animation: `float ${particle.duration}s infinite ease-in`,

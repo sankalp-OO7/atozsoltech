@@ -354,7 +354,7 @@ export function LoadingOverlay() {
       <AnimatePresence>
         {isLoading && (
           <motion.div
-            className="fixed inset-0 z-[9999] overflow-hidden h-screen w-screen pointer-events-auto"
+            className="fixed inset-0 z-[9999] overflow-hidden h-screen w-screen pointer-events-none"
             variants={loadingOverlayVariants}
             initial="initial"
             exit="exit"

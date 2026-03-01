@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { AuroraBackground } from '@/components/AuroraBackground';
-import { SectionHeader } from '@/components/SectionHeader';
-import { ServiceCard } from '@/components/ServiceCard';
-import { CTASection } from '@/components/CTASection';
+import { AuroraBackground } from "@/components/AuroraBackground";
+import { SectionHeader } from "@/components/SectionHeader";
+import { ServiceCard } from "@/components/ServiceCard";
+import { CTASection } from "@/components/CTASection";
 
 export default function Cloud() {
   return (
@@ -36,25 +36,45 @@ export default function Cloud() {
               icon="☁️"
               title="AWS Architecture"
               description="EC2, RDS, S3, Lambda, and comprehensive AWS solutions"
-              features={['Infrastructure Design', 'Cost Optimization', 'Migration', 'Management']}
+              features={[
+                "Infrastructure Design",
+                "Cost Optimization",
+                "Migration",
+                "Management",
+              ]}
             />
             <ServiceCard
               icon="⚙️"
               title="Azure Solutions"
               description="Azure VMs, SQL Database, Logic Apps, and enterprise integration"
-              features={['Cloud Migration', 'DevOps Setup', 'Hybrid Integration', 'Security']}
+              features={[
+                "Cloud Migration",
+                "DevOps Setup",
+                "Hybrid Integration",
+                "Security",
+              ]}
             />
             <ServiceCard
               icon="🔗"
               title="Hybrid Cloud"
               description="Seamless integration between on-premise and cloud infrastructure"
-              features={['VPN Setup', 'Load Balancing', 'Disaster Recovery', 'Data Sync']}
+              features={[
+                "VPN Setup",
+                "Load Balancing",
+                "Disaster Recovery",
+                "Data Sync",
+              ]}
             />
             <ServiceCard
               icon="🚀"
               title="Cloud Modernization"
               description="Transform legacy applications into cloud-native microservices"
-              features={['Container Services', 'Kubernetes', 'CI/CD Pipelines', 'Auto-scaling']}
+              features={[
+                "Container Services",
+                "Kubernetes",
+                "CI/CD Pipelines",
+                "Auto-scaling",
+              ]}
             />
           </div>
         </div>

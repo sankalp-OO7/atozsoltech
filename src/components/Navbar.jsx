@@ -88,7 +88,10 @@ export default function Navbar() {
               </ul>
 
               {/* CTA Button */}
-              <Link href="/contact" className="ml-4 cursor-pointer px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-sm transition-all hover:from-blue-700 hover:to-indigo-700 hover:scale-105 hover:shadow-lg active:scale-95 flex items-center gap-2">
+              <Link
+                href="/contact"
+                className="ml-4 cursor-pointer px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-sm transition-all hover:from-blue-700 hover:to-indigo-700 hover:scale-105 hover:shadow-lg active:scale-95 flex items-center gap-2"
+              >
                 Get Started
                 <ArrowRight className="w-4 h-4" />
               </Link>
@@ -134,7 +137,11 @@ export default function Navbar() {
               ))}
 
               <div className="pt-2 pb-4">
-                <Link href="/contact" onClick={() => setOpen(false)} className="cursor-pointer w-full mt-2 px-6 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold shadow-lg flex justify-center items-center gap-2 hover:from-blue-700 hover:to-indigo-700 transition-all">
+                <Link
+                  href="/contact"
+                  onClick={() => setOpen(false)}
+                  className="cursor-pointer w-full mt-2 px-6 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold shadow-lg flex justify-center items-center gap-2 hover:from-blue-700 hover:to-indigo-700 transition-all"
+                >
                   Get Started
                   <ArrowRight className="w-4 h-4" />
                 </Link>

@@ -135,12 +135,14 @@ src/
 ## 🚀 KEY FEATURES
 
 ### Dynamic Content
+
 - **Single JSON source** (`content.json`) for all text
 - Easy to update: change JSON, see changes everywhere
 - No hardcoded strings in components
 - Supports scaling to multiple clients
 
 ### Animations & Interactions
+
 - **Framer Motion** for all animations
 - Loading overlay: 4-second experience
 - Scroll-triggered animations
@@ -149,6 +151,7 @@ src/
 - Progress bar with smooth easing
 
 ### Performance
+
 - ✅ Static generation for all pages
 - ✅ Optimized images (Next.js Image optimization)
 - ✅ CSS-in-JS with Tailwind (zero runtime)
@@ -156,6 +159,7 @@ src/
 - ✅ Zero external API calls (except optional email)
 
 ### SEO & Accessibility
+
 - ✅ Semantic HTML structure
 - ✅ Meta tags in layout
 - ✅ Proper heading hierarchy
@@ -186,6 +190,7 @@ src/
 - Desktop: 1025px+
 
 All components use Tailwind's responsive prefixes:
+
 - `sm:` for small screens
 - `md:` for medium screens
 - `lg:` for large screens
@@ -195,7 +200,9 @@ All components use Tailwind's responsive prefixes:
 ## 🔧 CUSTOMIZATION GUIDE
 
 ### Change Colors
+
 Edit Tailwind classes in components:
+
 ```jsx
 // Change primary blue to another color
 from-blue-600 to-indigo-600  // Edit this
@@ -203,7 +210,9 @@ bg-blue-50                   // Edit icon backgrounds
 ```
 
 ### Update Content
+
 Edit `/src/data/content.json`:
+
 ```json
 {
   "brand": { "name": "New Company" },
@@ -214,12 +223,15 @@ Edit `/src/data/content.json`:
 ```
 
 ### Add New Pages
+
 1. Create `/src/app/page-name/page.jsx`
 2. Add to navigation in `Navbar.jsx`
 3. Add to footer in `Footer.jsx`
 
 ### Modify Loading Animation
+
 Edit `/src/components/LoadingOverlay.jsx`:
+
 - Change duration: `LOADING_DURATION_MS = 4000`
 - Change colors: Edit gradient and particle colors
 - Change text: Update company name and tagline
@@ -237,6 +249,7 @@ Edit `/src/components/LoadingOverlay.jsx`:
 ## ✨ NEXT STEPS (OPTIONAL)
 
 1. **Deploy to Vercel:**
+
    ```bash
    vercel deploy
    ```
@@ -278,6 +291,6 @@ Your AtoZ SolTech website is now a **premium, enterprise-ready digital presence*
 ✅ Fully responsive across all devices  
 ✅ JSON-driven content architecture  
 ✅ Smooth animations and interactions  
-✅ Production-ready performance  
+✅ Production-ready performance
 
 **Status: Ready to Deploy! 🚀**

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useInView } from 'framer-motion';
-import { useRef, useEffect, useState } from 'react';
+import { useInView } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 
 export function StatsCard({ value, label }) {
   const ref = useRef(null);
@@ -39,7 +39,11 @@ export function StatsCard({ value, label }) {
     >
       <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
         {displayValue}
-        {typeof value === 'string' && value.includes('%') ? '%' : value.includes('+') ? '+' : ''}
+        {typeof value === "string" && value.includes("%")
+          ? "%"
+          : value.includes("+")
+            ? "+"
+            : ""}
       </div>
       <p className="text-sm text-slate-600 mt-2">{label}</p>
     </div>

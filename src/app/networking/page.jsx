@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { AuroraBackground } from '@/components/AuroraBackground';
-import { SectionHeader } from '@/components/SectionHeader';
-import { ServiceCard } from '@/components/ServiceCard';
-import { CTASection } from '@/components/CTASection';
+import { AuroraBackground } from "@/components/AuroraBackground";
+import { SectionHeader } from "@/components/SectionHeader";
+import { ServiceCard } from "@/components/ServiceCard";
+import { CTASection } from "@/components/CTASection";
 
 export default function Networking() {
   return (
@@ -36,25 +36,45 @@ export default function Networking() {
               icon="🌐"
               title="Routing & Switching"
               description="Enterprise-grade routing, switching, and network design"
-              features={['Network Design', 'Configuration', 'Optimization', 'Troubleshooting']}
+              features={[
+                "Network Design",
+                "Configuration",
+                "Optimization",
+                "Troubleshooting",
+              ]}
             />
             <ServiceCard
               icon="📡"
               title="Wireless Networks"
               description="Secure and reliable wireless solutions for enterprises"
-              features={['WLAN Design', 'Security Setup', 'Mobility Solutions', 'Coverage Planning']}
+              features={[
+                "WLAN Design",
+                "Security Setup",
+                "Mobility Solutions",
+                "Coverage Planning",
+              ]}
             />
             <ServiceCard
               icon="🔒"
               title="Network Security"
               description="Firewalls, VPNs, and comprehensive security architecture"
-              features={['Firewall Setup', 'VPN Configuration', 'DLP Implementation', 'Compliance']}
+              features={[
+                "Firewall Setup",
+                "VPN Configuration",
+                "DLP Implementation",
+                "Compliance",
+              ]}
             />
             <ServiceCard
               icon="⚡"
               title="Performance Tuning"
               description="Optimize network performance and ensure reliability"
-              features={['Bandwidth Management', 'QoS Configuration', 'Monitoring', 'Analytics']}
+              features={[
+                "Bandwidth Management",
+                "QoS Configuration",
+                "Monitoring",
+                "Analytics",
+              ]}
             />
           </div>
         </div>

@@ -1,12 +1,7 @@
 @import "tailwindcss";
 
 /* Ensure text is selectable and user can interact with content */
-body {
-  user-select: text;
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-}
+
 
 /* Commented out old unused theme config */
 /*
@@ -14,7 +9,7 @@ body {
   --background: #ffffff;
  }
 
-@theme inline {
+@theme inline {P
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);

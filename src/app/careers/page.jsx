@@ -1,34 +1,34 @@
-'use client';
+"use client";
 
-import { AuroraBackground } from '@/components/AuroraBackground';
-import { SectionHeader } from '@/components/SectionHeader';
-import { CTASection } from '@/components/CTASection';
+import { AuroraBackground } from "@/components/AuroraBackground";
+import { SectionHeader } from "@/components/SectionHeader";
+import { CTASection } from "@/components/CTASection";
 
 export default function Careers() {
   const positions = [
     {
-      title: 'Senior Cloud Architect',
-      location: 'New Delhi, India',
-      type: 'Full-time',
-      experience: '8+ years'
+      title: "Senior Cloud Architect",
+      location: "New Delhi, India",
+      type: "Full-time",
+      experience: "8+ years",
     },
     {
-      title: 'AI/ML Engineer',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '5+ years'
+      title: "AI/ML Engineer",
+      location: "Remote",
+      type: "Full-time",
+      experience: "5+ years",
     },
     {
-      title: 'Network Engineer (CCIE)',
-      location: 'Bangalore, India',
-      type: 'Full-time',
-      experience: '7+ years'
+      title: "Network Engineer (CCIE)",
+      location: "Bangalore, India",
+      type: "Full-time",
+      experience: "7+ years",
     },
     {
-      title: 'Solutions Architect',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '6+ years'
+      title: "Solutions Architect",
+      location: "Remote",
+      type: "Full-time",
+      experience: "6+ years",
     },
   ];
 
@@ -60,39 +60,48 @@ export default function Careers() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                icon: '📚',
-                title: 'Learning & Development',
-                description: 'Continuous training and certification programs'
+                icon: "📚",
+                title: "Learning & Development",
+                description: "Continuous training and certification programs",
               },
               {
-                icon: '🌍',
-                title: 'Global Opportunities',
-                description: 'Work on diverse projects across industries and regions'
+                icon: "🌍",
+                title: "Global Opportunities",
+                description:
+                  "Work on diverse projects across industries and regions",
               },
               {
-                icon: '💼',
-                title: 'Career Growth',
-                description: 'Clear pathways to leadership and specialization'
+                icon: "💼",
+                title: "Career Growth",
+                description: "Clear pathways to leadership and specialization",
               },
               {
-                icon: '🎯',
-                title: 'Innovation Focus',
-                description: 'Work with cutting-edge technologies and methodologies'
+                icon: "🎯",
+                title: "Innovation Focus",
+                description:
+                  "Work with cutting-edge technologies and methodologies",
               },
               {
-                icon: '🤝',
-                title: 'Team Culture',
-                description: 'Collaborative environment with experienced mentors'
+                icon: "🤝",
+                title: "Team Culture",
+                description:
+                  "Collaborative environment with experienced mentors",
               },
               {
-                icon: '💰',
-                title: 'Competitive Benefits',
-                description: 'Attractive compensation and comprehensive benefits'
+                icon: "💰",
+                title: "Competitive Benefits",
+                description:
+                  "Attractive compensation and comprehensive benefits",
               },
             ].map((item, idx) => (
-              <div key={idx} className="p-6 rounded-3xl bg-white/80 backdrop-blur-xl border border-white/50 hover:shadow-xl transition-all">
+              <div
+                key={idx}
+                className="p-6 rounded-3xl bg-white/80 backdrop-blur-xl border border-white/50 hover:shadow-xl transition-all"
+              >
                 <div className="text-3xl mb-4">{item.icon}</div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">
+                  {item.title}
+                </h3>
                 <p className="text-slate-600">{item.description}</p>
               </div>
             ))}
@@ -111,7 +120,10 @@ export default function Careers() {
 
           <div className="space-y-4">
             {positions.map((position, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-white/80 backdrop-blur-xl border border-white/50 hover:shadow-xl transition-all group cursor-pointer">
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-white/80 backdrop-blur-xl border border-white/50 hover:shadow-xl transition-all group cursor-pointer"
+              >
                 <div className="flex items-start justify-between">
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">
